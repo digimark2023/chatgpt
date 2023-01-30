@@ -8,7 +8,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/", {
+    fetch("https://digimark2023.github.io/chatgpt/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
