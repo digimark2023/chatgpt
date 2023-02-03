@@ -1,15 +1,17 @@
 const OpenAI = require("openai");
 const { Configuration, OpenAIApi } = OpenAI;
-
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const port = 3001;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const configuration = new Configuration({
   organization: "org-vZPZUPWfSoBMGldgiJr15CXw",
-  apiKey: "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",
+  //apiKey: "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",
+  apiKey: API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
